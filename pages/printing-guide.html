@@ -1,0 +1,204 @@
+---
+layout: default
+title: Printing Guide
+description: "Complete guide to printing VentSnap floor vent attachments. Slicer settings, material recommendations, and troubleshooting tips."
+permalink: /printing-guide/
+---
+
+<section class="hero" style="padding: 3rem 0;">
+  <div class="container">
+    <h1>Printing Guide</h1>
+    <p>Everything you need to successfully print VentSnap attachments.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div style="max-width: 800px; margin: 0 auto;">
+      
+      <h2>Quick Start</h2>
+      <p>Both VentSnap designs are optimized for easy printing. No supports required, no exotic materials needed. If you can print a Benchy, you can print these.</p>
+      
+      <div class="callout callout-success">
+        <h4>TL;DR Settings</h4>
+        <p><strong>Layer height:</strong> 0.2mm | <strong>Infill:</strong> 20% | <strong>Walls:</strong> 3 | <strong>Material:</strong> PETG | <strong>Supports:</strong> None</p>
+      </div>
+      
+      <h2>Material Selection</h2>
+      
+      <h3>PETG (Recommended)</h3>
+      <p>PETG is the ideal material for both attachments. It handles the heat from floor vents (typically 100-130°F) without issue, prints easily on most printers, and offers excellent durability for repeated installation and removal.</p>
+      
+      <h3>PLA / PLA+</h3>
+      <p>PLA works for the Sheet Fort Clip if you're okay with potential warping over time. The clips see less sustained heat than the duct adapter. Not recommended for the Round Duct Adapter—it will deform within days of use.</p>
+      
+      <h3>ABS / ASA</h3>
+      <p>Overkill for most applications, but a good choice if your vents run especially hot or if you want maximum durability. ASA is preferred for any outdoor or UV-exposed use.</p>
+      
+      <div class="callout callout-warning">
+        <h4>Heat Warning</h4>
+        <p>Floor vents can reach 120-140°F (49-60°C) when your furnace is running. PLA's glass transition temperature is around 140°F. PETG handles up to 180°F. Choose accordingly.</p>
+      </div>
+      
+      <h2>Print Orientation</h2>
+      
+      <h3>Sheet Fort Clip</h3>
+      <p>Print with the flat base plate on the build surface and the clip mechanism facing up. This orientation requires no supports and puts layer lines in the optimal direction for clip strength.</p>
+      
+      <h3>Round Duct Adapter</h3>
+      <p>Print with the round opening facing up. The transition from rectangular base to round opening is designed with appropriate draft angles to print cleanly without supports.</p>
+      
+      <h2>Detailed Settings</h2>
+      
+      <table class="specs-table">
+        <thead>
+          <tr>
+            <th>Setting</th>
+            <th>Sheet Fort Clip</th>
+            <th>Round Duct Adapter</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Layer Height</strong></td>
+            <td>0.2mm (0.16-0.24 acceptable)</td>
+            <td>0.2mm (0.16-0.24 acceptable)</td>
+          </tr>
+          <tr>
+            <td><strong>First Layer Height</strong></td>
+            <td>0.25mm</td>
+            <td>0.25mm</td>
+          </tr>
+          <tr>
+            <td><strong>Line Width</strong></td>
+            <td>0.4mm (match nozzle)</td>
+            <td>0.4mm (match nozzle)</td>
+          </tr>
+          <tr>
+            <td><strong>Wall Count</strong></td>
+            <td>3 minimum</td>
+            <td>3 minimum</td>
+          </tr>
+          <tr>
+            <td><strong>Top/Bottom Layers</strong></td>
+            <td>4 layers</td>
+            <td>4 layers</td>
+          </tr>
+          <tr>
+            <td><strong>Infill Pattern</strong></td>
+            <td>Gyroid or Grid</td>
+            <td>Gyroid or Grid</td>
+          </tr>
+          <tr>
+            <td><strong>Infill Percentage</strong></td>
+            <td>20-25%</td>
+            <td>15-20%</td>
+          </tr>
+          <tr>
+            <td><strong>Print Speed</strong></td>
+            <td>50-60mm/s</td>
+            <td>50-60mm/s</td>
+          </tr>
+          <tr>
+            <td><strong>Supports</strong></td>
+            <td>None</td>
+            <td>None</td>
+          </tr>
+          <tr>
+            <td><strong>Bed Adhesion</strong></td>
+            <td>Brim optional</td>
+            <td>Brim recommended</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <h2>Bambu Studio / Orca Slicer Notes</h2>
+      <p>We've included pre-configured .3mf project files for Bambu Lab printers. These include optimal settings and proper orientation. Simply open the file and print.</p>
+      
+      <p>For Orca Slicer users, the Bambu .3mf files should import cleanly. Just verify your filament settings match.</p>
+      
+      <h2>Troubleshooting</h2>
+      
+      <h3>Base doesn't snap into vent</h3>
+      <p>The friction fit relies on precise dimensions. If your print is too loose, try adjusting your printer's XY compensation (make it slightly negative to print larger). If too tight, adjust in the opposite direction or lightly sand the edges.</p>
+      
+      <h3>Clip doesn't hold fabric</h3>
+      <p>Ensure you're printing with enough walls (3 minimum) and adequate infill. The clip relies on material stiffness. PETG works better than PLA for clip spring tension.</p>
+      
+      <h3>Duct adapter doesn't seal to hose</h3>
+      <p>Use a hose clamp for airtight sealing. The printed ridge provides grip but isn't designed to be airtight without a clamp. Standard 4" hose clamps are available at any hardware store.</p>
+      
+      <h3>Warping during print</h3>
+      <p>Common with PETG on non-enclosed printers. Solutions: use a brim, increase bed temperature by 5°C, reduce first layer speed, ensure no drafts, or print in an enclosure.</p>
+      
+      <h3>Deformation after installation</h3>
+      <p>You're probably using PLA on the duct adapter. Reprint in PETG. For the sheet fort clip, PLA may work but consider upgrading to PETG for longevity.</p>
+      
+      <h2>Scaling for Non-Standard Vents</h2>
+      
+      <p>The STL files are sized for the most common 4" × 10" floor vents (actual opening approximately 3.75" × 9.75"). For other vent sizes:</p>
+      
+      <table class="specs-table">
+        <thead>
+          <tr>
+            <th>Your Vent Size</th>
+            <th>X Scale</th>
+            <th>Y Scale</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>4" × 10" (standard)</td>
+            <td>100%</td>
+            <td>100%</td>
+          </tr>
+          <tr>
+            <td>4" × 12"</td>
+            <td>100%</td>
+            <td>120%</td>
+          </tr>
+          <tr>
+            <td>6" × 10"</td>
+            <td>150%</td>
+            <td>100%</td>
+          </tr>
+          <tr>
+            <td>6" × 12"</td>
+            <td>150%</td>
+            <td>120%</td>
+          </tr>
+          <tr>
+            <td>2" × 10"</td>
+            <td>50%</td>
+            <td>100%</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <div class="callout callout-info">
+        <h4>Custom Sizes</h4>
+        <p>For unusual vent sizes, download the STEP file and modify in your CAD software of choice. The parametric design makes adjustments straightforward.</p>
+      </div>
+      
+      <h2>Print Time Estimates</h2>
+      
+      <p>These times assume a 0.4mm nozzle at 50mm/s with the recommended settings:</p>
+      
+      <ul style="margin: 1rem 0; padding-left: 1.5rem;">
+        <li><strong>Sheet Fort Clip:</strong> 2-3 hours, ~80g filament</li>
+        <li><strong>Round Duct Adapter:</strong> 3-4 hours, ~120g filament</li>
+      </ul>
+      
+      <p>Faster printers (Bambu, Voron, etc.) can cut these times in half with appropriate settings.</p>
+      
+    </div>
+  </div>
+</section>
+
+<section style="background: var(--bg-white);">
+  <div class="container" style="text-align: center;">
+    <h2 class="section-title">Ready to Print?</h2>
+    <p style="color: var(--text-secondary); max-width: 500px; margin: 0 auto 2rem;">Download the files and get started. Both designs print in under 4 hours with no supports required.</p>
+    <a href="{{ '/products/' | relative_url }}" class="btn btn-primary">View Products & Downloads →</a>
+  </div>
+</section>

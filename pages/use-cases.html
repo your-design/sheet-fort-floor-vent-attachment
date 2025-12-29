@@ -1,0 +1,88 @@
+---
+layout: default
+title: Use Cases
+description: "Discover creative ways to use VentSnap floor vent attachments. From kids' forts to workshop heating."
+permalink: /use-cases/
+---
+
+<section class="hero" style="padding: 3rem 0;">
+  <div class="container">
+    <h1>Use Cases</h1>
+    <p>Real solutions from real users. See how people are using VentSnap attachments.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    {% for use_case in site.data.use_cases %}
+    <div style="background: var(--bg-white); border-radius: var(--radius); padding: 2rem; margin-bottom: 2rem; box-shadow: var(--shadow);">
+      <div style="display: flex; gap: 2rem; align-items: flex-start; flex-wrap: wrap;">
+        <div style="font-size: 3rem; background: var(--bg-light); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+          {{ use_case.icon }}
+        </div>
+        <div style="flex: 1; min-width: 280px;">
+          <h2 style="margin-bottom: 0.5rem;">{{ use_case.title }}</h2>
+          <p style="color: var(--text-secondary); margin-bottom: 1rem;">{{ use_case.description }}</p>
+          
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem;">
+            {% for story in use_case.stories %}
+            <span style="background: var(--bg-light); padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem; color: var(--text-secondary);">{{ story }}</span>
+            {% endfor %}
+          </div>
+          
+          <div>
+            {% if use_case.product == "sheet-fort-clip" %}
+            <a href="{{ '/products/sheet-fort-clip/' | relative_url }}" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.875rem;">View Sheet Fort Clip →</a>
+            {% elsif use_case.product == "round-duct-adapter" %}
+            <a href="{{ '/products/round-duct-adapter/' | relative_url }}" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.875rem;">View Duct Adapter →</a>
+            {% else %}
+            <a href="{{ '/products/' | relative_url }}" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.875rem;">View All Products →</a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section style="background: var(--bg-white);">
+  <div class="container">
+    <h2 class="section-title">User Stories</h2>
+    <p class="section-subtitle">How real people are using VentSnap</p>
+    
+    <div style="max-width: 800px; margin: 0 auto;">
+      <div style="border-left: 3px solid var(--primary); padding-left: 2rem; margin-bottom: 2rem;">
+        <h3 style="margin-bottom: 0.5rem;">The Basement Office Solution</h3>
+        <p style="color: var(--text-secondary); margin-bottom: 1rem;">"I work from home in a finished basement that's always 10 degrees colder than the rest of the house. My wife and I were constantly fighting over the thermostat. I printed the duct adapter and ran 12 feet of flex duct from an unused bedroom vent directly to my desk area. Problem solved—my office is comfortable and the rest of the house stays at a reasonable temperature."</p>
+        <p style="font-weight: 600; font-size: 0.875rem;">— Mike T., Denver CO</p>
+      </div>
+      
+      <div style="border-left: 3px solid var(--primary); padding-left: 2rem; margin-bottom: 2rem;">
+        <h3 style="margin-bottom: 0.5rem;">Birthday Party Magic</h3>
+        <p style="color: var(--text-secondary); margin-bottom: 1rem;">"My daughter wanted a 'camping' birthday party but we live in Seattle and it was January. I printed six sheet fort clips and we turned the entire living room into an epic blanket fort village. The vents kept all the forts warm and cozy. Best $3 in filament I've ever spent—the kids talked about that party for months."</p>
+        <p style="font-weight: 600; font-size: 0.875rem;">— Jennifer K., Seattle WA</p>
+      </div>
+      
+      <div style="border-left: 3px solid var(--primary); padding-left: 2rem; margin-bottom: 2rem;">
+        <h3 style="margin-bottom: 0.5rem;">Workshop Winter Solution</h3>
+        <p style="color: var(--text-secondary); margin-bottom: 1rem;">"My detached garage workshop is basically unusable in winter. I ran a 4-inch duct through the wall from a floor vent in the adjacent mudroom. Added an inline booster fan and now I have toasty warm air blowing into my shop whenever the heat runs. Total cost was about $50 including the printed adapter, duct, and fan."</p>
+        <p style="font-weight: 600; font-size: 0.875rem;">— Tom W., Columbus OH</p>
+      </div>
+      
+      <div style="border-left: 3px solid var(--primary); padding-left: 2rem; margin-bottom: 2rem;">
+        <h3 style="margin-bottom: 0.5rem;">Grandma's Secret Weapon</h3>
+        <p style="color: var(--text-secondary); margin-bottom: 1rem;">"I printed sheet fort clips for each of my grandchildren's houses. Now when they visit, 'Grandma's magic vent clips' come out and we build forts together. It's become our special thing. The kids love that the forts stay warm and puffy from the vent air. I've since printed sets as baby shower gifts for new parents too."</p>
+        <p style="font-weight: 600; font-size: 0.875rem;">— Lisa H., Phoenix AZ</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container" style="text-align: center;">
+    <h2 class="section-title">Share Your Story</h2>
+    <p style="color: var(--text-secondary); max-width: 500px; margin: 0 auto 2rem;">We love seeing how people use VentSnap. Submit your build photos and use case to be featured on the site.</p>
+    <a href="#" class="btn btn-primary">Submit Your Build →</a>
+  </div>
+</section>

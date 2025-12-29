@@ -1,0 +1,63 @@
+- name: "Sarah M."
+  location: "Portland, OR"
+  rating: 5
+  product: "Sheet Fort Clip Attachment"
+  avatar: "S"
+  review: "My kids are absolutely obsessed with their new sheet fort! The clip holds the fabric securely without tearing, and the warm air from the vent keeps them cozy. Best rainy day activity we've found."
+  verified: true
+  
+- name: "Mike T."
+  location: "Denver, CO"
+  rating: 5
+  product: "4\" Round Duct Adapter"
+  avatar: "M"
+  review: "Finally solved my basement humidity problem. Connected a 4\" duct hose to redirect warm air to my home office. Printed in PETG and it's been running for 3 months with zero issues."
+  verified: true
+
+- name: "Jennifer K."
+  location: "Austin, TX"
+  rating: 5
+  product: "Sheet Fort Clip Attachment"
+  avatar: "J"
+  review: "The design is so clever! My daughter loves that she can build her reading nook anywhere there's a floor vent. We've printed 4 of these for different rooms. Easy print, no supports needed."
+  verified: true
+
+- name: "David R."
+  location: "Minneapolis, MN"
+  rating: 5
+  product: "4\" Round Duct Adapter"
+  avatar: "D"
+  review: "Minnesota winters are brutal. Used this to redirect heat to my workshop in the garage. The snap-fit is solid and the seal is surprisingly airtight. Would love to see a 6\" version!"
+  verified: true
+
+- name: "Amanda L."
+  location: "Seattle, WA"
+  rating: 4
+  product: "Sheet Fort Clip Attachment"
+  avatar: "A"
+  review: "Great concept and works well. Printed in PLA and had to reprint in PETG for better heat resistance near the vent. One star off because the instructions could mention material choice more prominently."
+  verified: true
+
+- name: "Chris B."
+  location: "Chicago, IL"
+  rating: 5
+  product: "4\" Round Duct Adapter"
+  avatar: "C"
+  review: "I'm a 3D printing hobbyist and this is one of the most practical prints I've done. The tolerances are spot-on for standard dryer vent hoses. Used it to improve airflow to my filament dry box!"
+  verified: true
+
+- name: "Lisa H."
+  location: "Phoenix, AZ"
+  rating: 5
+  product: "Sheet Fort Clip Attachment"
+  avatar: "L"
+  review: "My grandkids think Grandma is a genius now. The clips work perfectly with fleece blankets and the vents provide just enough airflow to keep the fort comfortable. Printed as a gift for each grandkid!"
+  verified: true
+
+- name: "Tom W."
+  location: "Columbus, OH"
+  rating: 5
+  product: "4\" Round Duct Adapter"
+  avatar: "T"
+  review: "Creative solution for my weird HVAC setup. The adapter fits standard 4\"x10\" floor vents perfectly. I daisy-chained it with 8 feet of flex duct to heat my bathroom better. Works great!"
+  verified: true

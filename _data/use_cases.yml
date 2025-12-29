@@ -1,0 +1,79 @@
+- title: "Kids' Sheet Forts"
+  icon: "🏰"
+  description: "Create magical play spaces that stay warm and cozy. The clip securely holds blankets and sheets while the vent provides gentle airflow, making indoor camping an adventure."
+  product: "sheet-fort-clip"
+  stories:
+    - "Weekend reading nooks"
+    - "Indoor camping adventures"
+    - "Quiet time retreats"
+    - "Sleepover central"
+
+- title: "Home Office Comfort"
+  icon: "💼"
+  description: "Redirect warm or cool air directly to your workspace. Stop fighting with household thermostat settings and create your own microclimate for peak productivity."
+  product: "round-duct-adapter"
+  stories:
+    - "Basement office heating"
+    - "Garage workshop comfort"
+    - "Home gym ventilation"
+    - "Craft room airflow"
+
+- title: "Humidity Control"
+  icon: "💧"
+  description: "Route dry, heated air to areas prone to dampness. Perfect for basements, bathrooms, or any space where you need to reduce moisture without a dehumidifier."
+  product: "round-duct-adapter"
+  stories:
+    - "Basement moisture reduction"
+    - "Bathroom mirror defogging"
+    - "Closet mildew prevention"
+    - "Storage area preservation"
+
+- title: "Pet Comfort Zones"
+  icon: "🐕"
+  description: "Create warm resting spots for furry family members. Redirect vent air to pet beds or crates for cozy napping spots they'll love."
+  product: "round-duct-adapter"
+  stories:
+    - "Dog crate warming"
+    - "Cat bed heating"
+    - "Small pet enclosures"
+    - "Senior pet comfort"
+
+- title: "Grow Room Ventilation"
+  icon: "🌱"
+  description: "Maintain optimal temperature for indoor plants or seedling trays. Route warm air to grow shelves or greenhouses for year-round gardening."
+  product: "round-duct-adapter"
+  stories:
+    - "Seedling heat mats alternative"
+    - "Indoor greenhouse heating"
+    - "Grow tent temperature control"
+    - "Orchid room climate"
+
+- title: "Blanket Fort Parties"
+  icon: "🎉"
+  description: "Host the ultimate kids' party with interconnected fort systems. Multiple clips let you build massive structures spanning entire rooms."
+  product: "sheet-fort-clip"
+  stories:
+    - "Birthday party activities"
+    - "Playdate entertainment"
+    - "Movie night setups"
+    - "Rainy day adventures"
+
+- title: "Seasonal Comfort"
+  icon: "❄️"
+  description: "Balance temperature differences between rooms. Route excess heat from sunny rooms to cooler areas, or improve circulation in rooms with poor HVAC coverage."
+  product: "round-duct-adapter"
+  stories:
+    - "Cold room remediation"
+    - "Hot spot redistribution"
+    - "Addition heating"
+    - "Multi-level temperature balancing"
+
+- title: "Creative Projects"
+  icon: "🎨"
+  description: "Use the modular base to design your own attachments. The standardized interface means you can create custom solutions for your specific needs."
+  product: "both"
+  stories:
+    - "3D printer enclosure heating"
+    - "Drying cabinet airflow"
+    - "Resin curing chambers"
+    - "Tool storage ventilation"

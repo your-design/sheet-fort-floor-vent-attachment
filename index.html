@@ -1,0 +1,173 @@
+---
+layout: default
+title: Home
+description: "Open-source 3D printable attachments for standard floor vents. Build sheet forts, redirect airflow, and create custom HVAC solutions."
+---
+
+<section class="hero">
+  <div class="container">
+    <h1>Transform Any Floor Vent Into Something Useful</h1>
+    <p>Open-source, 3D printable attachments that snap onto standard floor vents. Build sheet forts for the kids or redirect airflow wherever you need it.</p>
+    <div class="hero-badges">
+      <span class="badge">🖨️ 3D Printable</span>
+      <span class="badge">📖 Open Source</span>
+      <span class="badge">🔧 No Tools Required</span>
+      <span class="badge">🏠 Fits Standard Vents</span>
+    </div>
+    <div style="margin-top: 2rem;">
+      <a href="#products" class="btn btn-outline-white">View Products</a>
+    </div>
+  </div>
+</section>
+
+<section id="products">
+  <div class="container">
+    <h2 class="section-title">Our Products</h2>
+    <p class="section-subtitle">Two designs, endless possibilities</p>
+    
+    <div class="products-grid">
+      {% for product in site.products %}
+      <div class="product-card">
+        <div class="product-image">
+          {% if product.images.size > 0 %}
+            <img src="{{ product.images[0] | relative_url }}" alt="{{ product.title }}">
+          {% else %}
+            <span>{{ product.title }}</span>
+          {% endif %}
+        </div>
+        <div class="product-content">
+          <h3>{{ product.title }}</h3>
+          <p>{{ product.tagline }}</p>
+          <div class="product-meta">
+            {% if product.print_time %}
+            <span class="meta-item">🕐 {{ product.print_time }}</span>
+            {% endif %}
+            {% if product.filament %}
+            <span class="meta-item">🧵 {{ product.filament }}</span>
+            {% endif %}
+          </div>
+          <div class="product-actions">
+            <a href="{{ product.url | relative_url }}" class="btn btn-primary">View Details</a>
+            {% if product.stl_file %}
+            <a href="{{ product.stl_file | relative_url }}" class="btn btn-secondary" download>Download STL</a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="use-cases">
+  <div class="container">
+    <h2 class="section-title">What Will You Build?</h2>
+    <p class="section-subtitle">Real solutions for real problems</p>
+    
+    <div class="use-cases-grid">
+      {% for use_case in site.data.use_cases limit:6 %}
+      <div class="use-case-card">
+        <div class="use-case-icon">{{ use_case.icon }}</div>
+        <h3>{{ use_case.title }}</h3>
+        <p>{{ use_case.description }}</p>
+      </div>
+      {% endfor %}
+    </div>
+    
+    <div style="text-align: center; margin-top: 2rem;">
+      <a href="{{ '/use-cases/' | relative_url }}" class="btn btn-secondary">See All Use Cases →</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2 class="section-title">What People Are Saying</h2>
+    <p class="section-subtitle">Real reviews from real makers</p>
+    
+    <div class="reviews-grid">
+      {% for review in site.data.reviews limit:6 %}
+      <div class="review-card">
+        <div class="review-header">
+          <div class="reviewer-avatar">{{ review.avatar }}</div>
+          <div class="reviewer-info">
+            <h4>{{ review.name }}</h4>
+            <span>{{ review.location }}</span>
+          </div>
+        </div>
+        <div class="review-stars">
+          {% for i in (1..review.rating) %}★{% endfor %}{% for i in (review.rating..4) %}☆{% endfor %}
+        </div>
+        <p>"{{ review.review }}"</p>
+        <div class="review-product">
+          {% if review.verified %}✓ Verified Purchase{% endif %} • {{ review.product }}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section style="background: linear-gradient(135deg, #1e293b 0%, #334155 100%); color: white; text-align: center;">
+  <div class="container">
+    <h2 style="margin-bottom: 1rem;">Ready to Print?</h2>
+    <p style="opacity: 0.8; max-width: 500px; margin: 0 auto 2rem;">Download the STL files, slice with your favorite slicer, and start printing. No supports needed, no special materials required.</p>
+    <a href="{{ '/printing-guide/' | relative_url }}" class="btn btn-outline-white">Read the Printing Guide →</a>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2 class="section-title">Quick Specs</h2>
+    <p class="section-subtitle">Everything you need to know at a glance</p>
+    
+    <div style="max-width: 800px; margin: 0 auto;">
+      <table class="specs-table">
+        <thead>
+          <tr>
+            <th>Specification</th>
+            <th>Sheet Fort Clip</th>
+            <th>Round Duct Adapter</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Vent Compatibility</td>
+            <td>4" × 10" standard</td>
+            <td>4" × 10" standard</td>
+          </tr>
+          <tr>
+            <td>Output Size</td>
+            <td>Rectangular clip</td>
+            <td>4" round (dryer hose)</td>
+          </tr>
+          <tr>
+            <td>Print Time</td>
+            <td>~2-3 hours</td>
+            <td>~3-4 hours</td>
+          </tr>
+          <tr>
+            <td>Filament Required</td>
+            <td>~80g</td>
+            <td>~120g</td>
+          </tr>
+          <tr>
+            <td>Recommended Material</td>
+            <td>PETG or PLA+</td>
+            <td>PETG</td>
+          </tr>
+          <tr>
+            <td>Supports Required</td>
+            <td>No</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td>Difficulty</td>
+            <td>Beginner</td>
+            <td>Beginner</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>

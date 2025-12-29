@@ -1,0 +1,42 @@
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>VentSnap</h4>
+        <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">
+          Open-source 3D printable attachments for standard floor vents. 
+          Build, share, and contribute.
+        </p>
+      </div>
+      <div class="footer-section">
+        <h4>Products</h4>
+        <ul>
+          {% for product in site.products %}
+          <li><a href="{{ product.url | relative_url }}">{{ product.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="{{ '/printing-guide/' | relative_url }}">Printing Guide</a></li>
+          <li><a href="{{ '/use-cases/' | relative_url }}">Use Cases</a></li>
+          <li><a href="{{ '/about/' | relative_url }}">About</a></li>
+          <li><a href="{{ site.repository }}">GitHub Repository</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Community</h4>
+        <ul>
+          <li><a href="#">Submit Your Build</a></li>
+          <li><a href="#">Request a Feature</a></li>
+          <li><a href="#">Contribute Designs</a></li>
+          <li><a href="#">Report an Issue</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>VentSnap is open source. Licensed under <a href="#" style="color: inherit;">MIT License</a>.</p>
+    </div>
+  </div>
+</footer>

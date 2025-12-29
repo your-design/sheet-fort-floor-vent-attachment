@@ -1,0 +1,146 @@
+---
+layout: default
+---
+
+<section class="product-hero">
+  <div class="container">
+    <div class="product-detail">
+      <div class="product-gallery">
+        <div class="main-image">
+          {% if page.images.size > 0 %}
+            <img src="{{ page.images[0] | relative_url }}" alt="{{ page.title }}">
+          {% else %}
+            <span>Product Image</span>
+          {% endif %}
+        </div>
+        {% if page.images.size > 1 %}
+        <div class="thumbnail-grid">
+          {% for image in page.images %}
+          <div class="thumbnail{% if forloop.first %} active{% endif %}">
+            <img src="{{ image | relative_url }}" alt="{{ page.title }} view {{ forloop.index }}">
+          </div>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+      
+      <div class="product-info">
+        <h1>{{ page.title }}</h1>
+        <p class="product-tagline">{{ page.tagline }}</p>
+        
+        <div class="product-meta">
+          {% if page.print_time %}
+          <span class="meta-item">🕐 {{ page.print_time }}</span>
+          {% endif %}
+          {% if page.filament %}
+          <span class="meta-item">🧵 {{ page.filament }}</span>
+          {% endif %}
+          {% if page.difficulty %}
+          <span class="meta-item">📊 {{ page.difficulty }}</span>
+          {% endif %}
+        </div>
+        
+        <div class="product-description">
+          {{ content }}
+        </div>
+        
+        {% if page.features %}
+        <ul class="features-list">
+          {% for feature in page.features %}
+          <li>{{ feature }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+        
+        <div class="product-actions">
+          {% if page.stl_file %}
+          <a href="{{ page.stl_file | relative_url }}" class="btn btn-primary" download>
+            ⬇️ Download STL
+          </a>
+          {% endif %}
+          {% if page.step_file %}
+          <a href="{{ page.step_file | relative_url }}" class="btn btn-secondary" download>
+            📐 STEP File
+          </a>
+          {% endif %}
+        </div>
+        
+        {% if page.vent_compatibility %}
+        <div class="callout callout-info">
+          <h4>Vent Compatibility</h4>
+          <p>{{ page.vent_compatibility }}</p>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% if page.print_settings %}
+<section class="specs-section">
+  <div class="container">
+    <div class="print-settings">
+      <h3>🖨️ Recommended Print Settings</h3>
+      <div class="settings-grid">
+        {% for setting in page.print_settings %}
+        <div class="setting-item">
+          <label>{{ setting[0] }}</label>
+          <span>{{ setting[1] }}</span>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% if page.downloads %}
+<section class="downloads-section">
+  <div class="container">
+    <h2 class="section-title">Downloads</h2>
+    <p class="section-subtitle">All files for this product</p>
+    
+    <div class="downloads-grid">
+      {% for download in page.downloads %}
+      <a href="{{ download.url | relative_url }}" class="download-card" download>
+        <div class="download-icon">{{ download.icon | default: "📄" }}</div>
+        <div class="download-info">
+          <h4>{{ download.name }}</h4>
+          <span>{{ download.format }} • {{ download.size }}</span>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<section>
+  <div class="container">
+    <h2 class="section-title">More Products</h2>
+    <p class="section-subtitle">Check out our other vent attachments</p>
+    
+    <div class="products-grid">
+      {% for product in site.products %}
+        {% unless product.url == page.url %}
+        <div class="product-card">
+          <div class="product-image">
+            {% if product.images.size > 0 %}
+              <img src="{{ product.images[0] | relative_url }}" alt="{{ product.title }}">
+            {% else %}
+              <span>{{ product.title }}</span>
+            {% endif %}
+          </div>
+          <div class="product-content">
+            <h3>{{ product.title }}</h3>
+            <p>{{ product.excerpt | strip_html | truncate: 100 }}</p>
+            <div class="product-actions">
+              <a href="{{ product.url | relative_url }}" class="btn btn-secondary">View Details</a>
+            </div>
+          </div>
+        </div>
+        {% endunless %}
+      {% endfor %}
+    </div>
+  </div>
+</section>

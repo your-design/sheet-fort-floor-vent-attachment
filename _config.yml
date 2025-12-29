@@ -1,0 +1,44 @@
+# Site Settings
+title: "VentSnap - Floor Vent Attachment System"
+description: "Open-source 3D printable attachments for standard floor vents. Build sheet forts, redirect airflow, and more."
+baseurl: "" # subpath, e.g. /blog
+url: "https://sheet-fort-floor-vent-attachment.your-design.app" # Will be set by GitHub Pages
+repository: "https://github.com/your-design/sheet-fort-floor-vent-attachment"
+
+# Author
+author:
+  name: "Kevin J. Smith"
+  email: "kevin.j.smith@your-design.app"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:title/
+
+# Collections
+collections:
+  products:
+    output: true
+    permalink: /products/:name/
+  reviews:
+    output: false
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "products"
+    values:
+      layout: "product"
+
+# Plugins
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor

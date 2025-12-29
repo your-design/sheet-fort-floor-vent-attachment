@@ -1,0 +1,81 @@
+---
+layout: default
+title: Products
+description: "Browse all VentSnap floor vent attachments. Download STL files and start printing today."
+permalink: /products/
+---
+
+<section class="hero" style="padding: 3rem 0;">
+  <div class="container">
+    <h1>Products</h1>
+    <p>Open-source designs for standard floor vents. Download, print, and customize.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="products-grid">
+      {% for product in site.products %}
+      <div class="product-card">
+        <div class="product-image">
+          {% if product.images.size > 0 %}
+            <img src="{{ product.images[0] | relative_url }}" alt="{{ product.title }}">
+          {% else %}
+            <span>{{ product.title }}</span>
+          {% endif %}
+        </div>
+        <div class="product-content">
+          <h3>{{ product.title }}</h3>
+          <p>{{ product.tagline }}</p>
+          <div class="product-meta">
+            {% if product.print_time %}
+            <span class="meta-item">🕐 {{ product.print_time }}</span>
+            {% endif %}
+            {% if product.filament %}
+            <span class="meta-item">🧵 {{ product.filament }}</span>
+            {% endif %}
+            {% if product.difficulty %}
+            <span class="meta-item">📊 {{ product.difficulty }}</span>
+            {% endif %}
+          </div>
+          <div class="product-actions">
+            <a href="{{ product.url | relative_url }}" class="btn btn-primary">View Details</a>
+            {% if product.stl_file %}
+            <a href="{{ product.stl_file | relative_url }}" class="btn btn-secondary" download>Download STL</a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="use-cases">
+  <div class="container">
+    <h2 class="section-title">Coming Soon</h2>
+    <p class="section-subtitle">Designs currently in development</p>
+    
+    <div class="use-cases-grid">
+      <div class="use-case-card">
+        <div class="use-case-icon">📏</div>
+        <h3>6" Round Adapter</h3>
+        <p>Larger duct connection for higher airflow applications. Perfect for workshops and garages.</p>
+      </div>
+      <div class="use-case-card">
+        <div class="use-case-icon">🔀</div>
+        <h3>Y-Splitter</h3>
+        <p>Split one vent into two 3" ducts for distributing air to multiple locations.</p>
+      </div>
+      <div class="use-case-card">
+        <div class="use-case-icon">🎚️</div>
+        <h3>Adjustable Damper</h3>
+        <p>Control airflow with an integrated damper blade. Balance your HVAC without climbing into the ducts.</p>
+      </div>
+    </div>
+    
+    <div style="text-align: center; margin-top: 2rem;">
+      <p style="color: var(--text-secondary);">Have an idea for a new attachment? <a href="#">Submit a feature request</a></p>
+    </div>
+  </div>
+</section>
