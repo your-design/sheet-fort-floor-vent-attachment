@@ -4,6 +4,7 @@ Open-source 3D printable attachments for standard floor vents.
 
 ![VentSnap](assets/images/hero-placeholder.jpg)
 
+
 ## Products
 
 ### Sheet Fort Clip Attachment
